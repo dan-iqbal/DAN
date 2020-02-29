@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Ramabhadra&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: #F9F9F9;
+            }
+            #option{
+                position: absolute;
+                right: 20px;
+            }
+            .container{
+
+            }
+            .card-img-top{
+                width: 75vh;
+                height: 65vh;
+                object-fit: cover;
+            }
+            h2{
+                left: 10px;
+            }
+            #navbar3{
+                margin-top: 98px;
+            }
+            #item-detail{
+                font-size: 20px;
+            }
+            #price{
+                padding-left: 300px;
+            }
+            #time{
+                padding-left: 300px;
+            }
+            .navbar {
+                background: #ffffff;
+            }
+            #nav1{
+                box-shadow: 0px 7px 7px -6px rgba(153,153,153,1);
+            }
+            #src{
+                width: 60vw;
+                position: absolute;
+                left: 18%;
+            }   
+            .form-rounded{
+                border-radius: 2rem;
+            }
+            #navbar2{
+                background: #ffffff;
+                opacity: 60%;
+                height: 5vh;
+            }
+            #masukbtn{
+                padding-right: 60px;
+                color: #777777; 
+            }
+            #daftarbtn{
+                padding-right: 60px;
+                color: #777777;
+            }
+            #masukbtn:hover{
+                color: #E6675A; 
+            }
+            #daftarbtn:hover{
+                color: #E6675A;
+            }
+            #option{
+                font-size: 17px;
+                font-family: 'Montserrat';
+                padding-right: 45px;
+            }
+            #logout{
+                color: #777777;
+            }
+            #logout:hover{
+                color: #E6675A;
+            }
+            .footer{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 10vh;
+                background-color:#ffffff;
+                color:black;
+                box-shadow: 0px -1px 5px 0px rgba(209,209,209,1);   
+            }
+            .nav-link{
+                font-family: 'Montserrat';
+                color: #777777;
+            }
+            .kat{
+                font-family: 'Montserrat';
+                color: #777777;
+                text-align: center;
+                width: 120px;
+            }
+            .kat:hover{
+                color: #E6675A;
+            }
+            .foot{
+                font-family: 'Raleway';
+                color : #E6675A;
+            }
+            .foot:hover{
+                color: rgb(136, 40, 30);
+            }
+            .navbar-nav{
+                text-align: center;
+            }
+            .feet{
+                margin-left: 490px;
+                margin-right: 470px;
+            }
+            .col-lg-3{
+                width: 150px;
+                text-align: center;
+            }
+            .col-lg-2{
+                text-align: center;
+                width: 140px;
+                padding: 10px;
+            }
+            .plate{
+                background-color: #ffffff;
+                height: 49vh;
+                box-shadow: 3px 3px 5px 0px rgba(222,222,222,1);
+                border-radius: 10px;
+            }
+            .main-body{
+                padding-top: 80px;
+            }
+            .product-img{
+                border-radius: 20px;
+                width: 450px;
+                height: 320px;
+                border-color: #777777;
+                margin-left: 20px;
+                overflow: hidden;
+            }
+            .product-img img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .col-lg-5{
+                padding: 20px;
+                height: 350px;
+            }
+            .col-lg-7{
+                padding: 20px;
+                height: 350px;
+            }
+            .underline{
+                background:#777777 ;
+                height: 1px;
+                width: 583px;
+            }
+            .kind{
+                font-family: 'Montserrat';
+                font-size: 19px;
+            }
+            .name{
+                font-family: 'Montserrat';
+                font-size: 31px;
+            }
+            .kiri{
+                font-family: 'Ramabhadra';
+                font-size: 35px;
+            }
+            .card-body{
+                padding: 0px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .btn{
+                width: 100px;
+                font-size: 20px;
+                font-family: 'Montserrat';
+                background-color: #E6675A;
+                color:white;
+                margin-top: 10px;
+            }
+            .btn:hover{
+                background-color: rgb(177, 67, 55);
+            }
+            .desc{
+                padding-left: 40px;
+                font-family: 'Montserrat';
+                font-size: 24px;
+            }
+            .desc-card{
+                background-color: #F9F9F9;
+                width: 1054px;
+                height: 140px;
+                margin: auto;   
+            }
+            .descs{
+                padding-left: 5px;
+                color: rgb(105, 105, 105);
+            }
+            .bidset{
+                margin-top: 10px;
+                padding-right: 20px;
+                font-size: 28px;
+                font-family: 'Ramabhadra';
+            }
+            #plus{
+                position: absolute;
+                right: 55px;
+                float: right;
+            }
+            #min{
+                position: absolute;
+                right: 100px;
+                float: right;
+            }
+        </style>
+        <script>
+            var initial = 0;
+            initial = hasil.value ;
+            function inc(val){
+                initial += 5000;
+                document.getElementById("hasil").innerHTML=initial;
+            }
+            function dec(val){
+                if(initial==0){
+
+                }else{
+                    initial -= 5000;
+                    document.getElementById("hasil").innerHTML=initial;
+                }
+            }
+            function send(){
+                var a;
+                var b;
+                var c;
+                a = hasil.value;
+                b = val.value;
+                c = a + b;
+                document.getElementById("tes").innerHTML=c;
+            }
+        </script>
+    </head>
+    <body>
+        <nav id="nav1" class="navbar navbar-expand-sm">
+            <a class="navbar-brand" href="#">
+                <img src="auxion.png" alt="logo" style="width: 170px;">
+            </a>
+            <form  id="srcbar" class="form-inline" action="Login.html" style="width: 800px;">
+                    <input type="text" class="form-control form-rounded" id="src" placeholder="Cari Barang...">
+            </form>
+            <div id="option">
+                <a><label id="masukbtn" type="Text"  formaction="Login.html"> USNM</label></a>
+                <a href=#><label id="logout" type="Text"  formaction="RegisterB.html">Log Out</label></a>
+            </div>
+        </nav>
+
+        <nav id="navbar2" class="navbar navbar-expand-sm">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <a class="kat nav-link" href="#">Fashion</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="kat nav-link" href="#">Aksesoris</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="kat nav-link" href="#">Sepatu</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="kat nav-link" href="#">Tas</a>
+                    </div>
+                    <div class="col-lg-2">
+                        <a class="kat nav-link" href="#">Hobi</a>
+                    </div>
+                </div>
+        </nav>
+        <!-- BAGIAN TOP END -->
+
+        <div class="container main-body">
+            <div class="card plate">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="product-img" style="background-color: black;">
+                            <img src="shoes1.jpg">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="card-body">
+                            <div class="row data">
+                                <a class="name" style="color: rgb(95, 95, 95);">Name Product Here</a>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="row data">
+                                <a class="kind" style="color: #838383;">Harga</a>
+                                <a class="kiri" style="color: #E6675A; padding-left: 100px;">Rp. </a>
+                                <a class="kiri" style="color: #E6675A; padding-left: 10px;">00000</a>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="row data">
+                                <a class="kind" style="color: #838383;">Sisa Waktu</a>
+                                <a class="kiri" style="color: #E6675A; padding-left: 53px;">1 Jam</a>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="row data">
+                                    <a class="bidset" style="color: #E6675A;">Rp. </a>
+                                    <a id="val" class="bidset" style="color: #E6675A;">500000</a><br>
+                                    <a class="bidset" style="color: #E6675A;">+</a>
+                                    <span id="hasil" class="bidset" style="color: #E6675A;">0</span>
+                                    <button type="button" onclick="dec(0)" id="min" class="btn" style="width: 50px; margin-right: 10px;">-</button><br>
+                                    <button type="button" onclick="inc(0)" id="plus" class="btn" style="width: 50px;">+</button>
+                            </div>
+                            <div class="row data">
+                                <button type="button" class="btn" onclick="send()">BID</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <!-- BAGIAN FOOTER -->
+        <nav id="navbar3" class="footer navbar navbar-expand-sm">
+            <div class="container feet">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a class="foot nav-link" href="#">Support</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="foot nav-link" href="#">Guide</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="foot nav-link" href="#">About Us</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class="foot nav-link" href="#">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </nav>
+    </body>
+</html>

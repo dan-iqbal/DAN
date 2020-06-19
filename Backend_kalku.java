@@ -147,3 +147,9 @@ public class Backend_kalku {
     }
     
 }
+
+
+//this file is created by me, fauzidan iqbal ghiffari
+//this file is my work for visual programming to make calculator as a back end side for my calculator
+//its using queue and infix for better counting with priorities e.g brackets first then division .etc
+//i hope it helps u and promise you will learn it, not just copying it just to finish your task and forget it. 

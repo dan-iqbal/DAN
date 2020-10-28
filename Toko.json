@@ -1,0 +1,25 @@
+{
+    "TOKO A": [
+        {
+            "NAMA" : "OLSHOP BABY",
+            "OWNER" : "JOKO",
+            "PRODUK" : [
+                {
+                    "NAMAPRODUK" : "DIAPERS",
+                    "STOCK" : 150,
+                    "HARGA" : 30000
+                },
+                {
+                    "NAMAPRODUK" : "SUSU",
+                    "STOCK" : 50,
+                    "HARGA" : 80000
+                },
+                {
+                    "NAMAPRODUK" : "BAJU BAYI",
+                    "STOCK" : 30,
+                    "HARGA" : 50000
+                }
+            ]
+        }
+    ]
+}
